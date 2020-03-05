@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>编组 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="20" cy="20" r="20"></circle>
+        <linearGradient x1="22.4601195%" y1="20.9422103%" x2="62.4288663%" y2="63.5692893%" id="linearGradient-3">
+            <stop stop-color="#221145" stop-opacity="0.271771198" offset="0%"></stop>
+            <stop stop-color="#1D1457" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="113.357391%" y1="86.0136779%" x2="50%" y2="24.7447166%" id="linearGradient-4">
+            <stop stop-color="#939393" offset="0%"></stop>
+            <stop stop-color="#FDF1FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M2.16095329,8.32926827 L21.8390122,0.585282232 C22.2859003,0.409416532 22.7907421,0.629123639 22.9666078,1.07601179 C23.0279826,1.23196977 23.0429796,1.40234149 23.0097939,1.56662316 L19.593445,18.4788573 C19.4983535,18.9495964 19.0396572,19.2541191 18.568918,19.1590276 C18.4483965,19.1346817 18.3344083,19.0850533 18.234476,19.0134175 L8.96205507,12.3665512 L8.96205507,12.3665512 L2.18804387,9.95773741 C1.73555335,9.79683342 1.49917576,9.29957893 1.66007975,8.8470884 C1.74432161,8.61018535 1.92698337,8.4213434 2.16095329,8.32926827 Z" id="path-5"></path>
+        <filter x="2.6%" y="-2.4%" width="100.4%" height="104.3%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="PC版" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Beex-PC端首页" transform="translate(-1375.000000, -2284.000000)">
+            <g id="编组-9" transform="translate(0.000000, 2172.000000)">
+                <g id="编组-11" transform="translate(1375.000000, 112.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="蒙版" fill="#23252B" xlink:href="#path-1"></use>
+                    <polygon id="路径-27" fill="url(#linearGradient-3)" mask="url(#mask-2)" points="15.3451384 29.9397544 29.4132155 42.5584265 43.2292778 27.0144564 28.8439706 12.0756525"></polygon>
+                    <g mask="url(#mask-2)">
+                        <g transform="translate(6.086957, 11.304348)">
+                            <polygon id="路径-26" fill="#353535" fill-rule="evenodd" points="9.2581819 18.6354066 13.3056911 15.2395466 9.79042811 12.7848106"></polygon>
+                            <g id="路径-24" fill="none">
+                                <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                            </g>
+                            <polygon id="路径-25" fill="#000000" fill-rule="evenodd" points="7.07598665 11.7001873 19.7847312 3.47226443 9.99225775 13.1126464 9.2581819 18.6354066"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

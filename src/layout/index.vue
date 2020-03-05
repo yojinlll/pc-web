@@ -1,21 +1,24 @@
 <template>
   <div id="layout">
-    <div style="line-height:100px; border: 1px solid #000">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/layout">Layout</router-link>
-    </div>
+    <the-header />
     <router-view />
-    <div style="line-height:100px; border: 1px solid #000">footer</div>
+    <the-footer />
   </div>
 </template>
 
 <script>
+import TheHeader from './header'
+import TheFooter from './footer'
 export default {
   name: 'Layout',
+  components: {
+    TheHeader,
+    TheFooter
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+#layout{ min-width: 768px; }
 
 </style>

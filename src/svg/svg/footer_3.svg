@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>编组 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="20" cy="20" r="20"></circle>
+        <linearGradient x1="20.2648702%" y1="20.9422103%" x2="63.4195918%" y2="63.5692893%" id="linearGradient-3">
+            <stop stop-color="#221145" stop-opacity="0.271771198" offset="0%"></stop>
+            <stop stop-color="#1D1457" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="113.357391%" y1="84.8918644%" x2="50%" y2="25.5314099%" id="linearGradient-4">
+            <stop stop-color="#939393" offset="0%"></stop>
+            <stop stop-color="#FDF1FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M30.246095,12.3668059 C29.5323566,13.1023103 28.7915526,13.4700626 28.0236829,13.4700626 C26.8718783,13.4700626 26.442422,12 24.4143925,12 C22.386363,12 19.9740871,13.204905 19.9740871,17.0468398 C16.583492,17.3008305 13.494597,15.9437573 10.7074023,12.9756201 C9.8271284,14.9592818 10.1740721,16.7950689 11.7482334,18.4829817 C11.0846516,18.7224086 10.4346973,18.6590031 9.79837051,18.292765 C10.2506067,20.4669861 11.4269564,21.9458862 13.3274197,22.7294653 C12.8229449,23.2495072 12.2047534,23.42606 11.472845,23.2591236 C12.6970455,24.8630003 14.0614952,25.763927 15.5661943,25.9619037 C14.3633814,27.3310852 12.2857611,27.9878533 9.33333333,27.9322078 C13.7972597,30.326448 18.1641992,30.3912731 22.4341518,28.126683 C26.4054009,25.5946345 28.4505613,21.8392275 28.5696331,16.8604618 C29.6686944,15.9857108 30.3504303,15.1213415 30.6148409,14.2673538 C30.0994843,14.4774921 29.722815,14.6113814 29.4848332,14.6690218 C29.3221928,14.708414 29.0621725,14.7526945 28.7047721,14.8018632 C29.1367791,14.3943075 29.4513467,14.0348134 29.6484747,13.7233808 C29.8456028,13.4119483 30.0448095,12.9597566 30.246095,12.3668059 Z" id="path-5"></path>
+        <filter x="-4.7%" y="-5.6%" width="109.4%" height="111.2%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="PC版" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Beex-PC端首页" transform="translate(-1495.000000, -2284.000000)">
+            <g id="编组-9" transform="translate(0.000000, 2172.000000)">
+                <g id="编组-11" transform="translate(1495.000000, 112.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="蒙版" fill="#23252B" xlink:href="#path-1"></use>
+                    <polygon id="路径-27" fill="url(#linearGradient-3)" mask="url(#mask-2)" points="14.531843 29.3670658 29.4132155 42.5584265 43.2292778 27.0144564 30.246095 12.3668059"></polygon>
+                    <g id="路径-45" mask="url(#mask-2)">
+                        <use fill="url(#linearGradient-4)" fill-rule="evenodd" xlink:href="#path-5"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
