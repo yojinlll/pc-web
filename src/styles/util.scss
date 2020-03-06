@@ -11,6 +11,28 @@
   &:hover{ background: linear-gradient(169deg,#ffea75 0%,#ffd153 100%); }
 }
 
+.common-btn{
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  border-radius:6px;
+  cursor: pointer;
+  transition: all 250ms;
+  white-space: nowrap;
+  line-height: 1;
+  text-align: center;
+
+  
+  &.y-btn{ background-color: #FFC100; }
+  &.g-btn{ background-color: #39B167; }
+  &.b-btn{ background-color: #347FFF; }
+  &.y-btn:hover{ background: lighten(#FFC100, 10%); }
+  &.g-btn:hover{ background: lighten(#39B167, 10%); }
+  &.b-btn:hover{ background: lighten(#347FFF, 10%); }
+}
+
 .line-btn {
   height: 48px;
   line-height: 48px;

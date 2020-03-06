@@ -1,0 +1,8 @@
+// trade
+@mixin active{
+  display: block; content: '';
+  height: 4px; width: 30px;
+  position: absolute;
+  left: 50%; bottom: -30%;
+  transform: translateX(-50%);
+}

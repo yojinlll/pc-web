@@ -7,7 +7,7 @@
         </div>
       </el-carousel-item>
     </el-carousel>
-    <div class="container page-main">
+    <div class="container page-max">
       <div class="quotes">
         <div class="title">实时行情</div>
         <ul class="line-wrap">
@@ -45,7 +45,7 @@
 
     </div>
     <div class="app-wrap">
-      <div class="inner page-main flex row-vh-c">
+      <div class="inner page-max flex row-vh-c">
         <img src="./app.png" alt="app" />
         <div class="download">
           <h1 class="title">BEEX 官方APP下载</h1>

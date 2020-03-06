@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="inner page-main flex row-v-c">
+    <div class="page-max flex row-v-c">
       <div class="logo line-wrap">
         <img alt="Vue logo" src="@/assets/logo.png">
         Beex
@@ -10,7 +10,7 @@
       </ul>
 
       <div class="action flex row-v-c">
-        <div class="login-btn y-theme">登录</div>
+        <div class="common-btn y-theme">登录</div>
         <div class="lang">En</div>
       </div>
     </div>
@@ -24,16 +24,16 @@ export default {
     return {
       navList: [
         {
-          name: 'home',
+          name: '主页',
           router: 'home',
+        },
+        {
+          name: '场外交易',
+          router: 'trade',
         },
         {
           name: 'about',
           router: 'about',
-        },
-        {
-          name: 'layout',
-          router: 'layout',
         },
       ]
     }
@@ -46,25 +46,14 @@ export default {
   background-color: #23252B;
   width: 100%;
   color: #fff;
+  padding: 10px 0;
 }
 
-.inner{ padding: 10px 0; }
 .logo{ font-size: 24px; font-weight: 600; }
 
 .nav{
   margin-left: 100px;
   & > li{ margin-right: 50px; cursor: pointer; color: #bebdc5; }
 }
-.action{
-  margin-left: auto;
-
-  .login-btn{
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #000;
-    border-radius:6px;
-    margin-right: 10px;
-  }
-}
+.action{ margin-left: auto; }
 </style>

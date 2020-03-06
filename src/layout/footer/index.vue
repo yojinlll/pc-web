@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="page-main">
+    <div class="page-max">
       <div class="logo flex row-v-c">
         <img alt="Vue logo" src="@/assets/logo.png">
         Beex
