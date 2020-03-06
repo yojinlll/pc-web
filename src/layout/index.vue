@@ -19,6 +19,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#layout{ min-width: 768px; }
-
+#layout{ min-width: 1000px; background-color: #181A1E; }
 </style>

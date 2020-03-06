@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+// yellow theme
+.y-theme {
+  background:linear-gradient(169deg,#ffe552 0%,#ffc629 100%);
+  &:hover{ background: linear-gradient(169deg,#ffea75 0%,#ffd153 100%); }
+}
+
 .line-btn {
   height: 48px;
   line-height: 48px;

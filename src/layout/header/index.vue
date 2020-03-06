@@ -10,7 +10,7 @@
       </ul>
 
       <div class="action flex row-v-c">
-        <div class="login-btn">登录</div>
+        <div class="login-btn y-theme">登录</div>
         <div class="lang">En</div>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {
   color: #fff;
 }
 
-.inner{ padding: 10px; }
+.inner{ padding: 10px 0; }
 .logo{ font-size: 24px; font-weight: 600; }
 
 .nav{
@@ -63,7 +63,6 @@ export default {
     font-size: 14px;
     font-weight: 600;
     color: #000;
-    background:linear-gradient(169deg,rgba(255,229,82,1) 0%,rgba(255,198,41,1) 100%);
     border-radius:6px;
     margin-right: 10px;
   }
