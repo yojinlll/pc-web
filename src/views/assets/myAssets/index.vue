@@ -64,7 +64,14 @@
 </template>
 
 <script>
+import { Icon, Option, Select} from 'element-ui'
 export default {
+  name: 'MyAssets',
+  components: {
+    [Icon.name]: Icon,
+    [Option.name]: Option,
+    [Select.name]: Select,
+  },
   data() {
     return {
       token: 'USDT',

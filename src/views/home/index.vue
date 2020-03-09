@@ -61,8 +61,17 @@
 </template>
 
 <script>
+import { Carousel, CarouselItem, Table, TableColumn, Tabs, TabPane,} from 'element-ui'
 export default {
   name: 'Home',
+  components:{
+    [Carousel.name]: Carousel,
+    [CarouselItem.name]: CarouselItem,
+    [Table.name]: Table,
+    [TableColumn.name]: TableColumn,
+    [Tabs.name]: Tabs,
+    [TabPane.name]: TabPane,
+  },
   data() {
     return {
       currencyList: 4,

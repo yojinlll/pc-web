@@ -76,8 +76,16 @@
 </template>
 
 <script>
+import { Table, TableColumn, Input, Select, Option} from 'element-ui'
 export default {
   name: 'QuickBuy',
+  components: {
+    [Table.name]: Table,
+    [TableColumn.name]: TableColumn,
+    [Input.name]: Input,
+    [Select.name]: Select,
+    [Option.name]: Option,
+  },
   data() {
     return {
       curIdx: 0,
