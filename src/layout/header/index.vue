@@ -32,6 +32,10 @@ export default {
           router: 'trade',
         },
         {
+          name: '资产',
+          router: 'assets',
+        },
+        {
           name: 'about',
           router: 'about',
         },

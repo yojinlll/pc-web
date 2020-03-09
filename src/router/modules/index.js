@@ -25,6 +25,14 @@ const routes = [
         },
       },
       {
+        path: 'assets',
+        name: 'assets',
+        component: () => import('@/views/assets/index.vue'),
+        meta: {
+          title: '资产',
+        },
+      },
+      {
         path: 'about',
         name: 'about',
         component: () => import('@/views/About.vue')
