@@ -25,12 +25,31 @@ const routes = [
         },
       },
       {
-        path: 'assets',
+        path: '/assets',
         name: 'assets',
+        redirect: '/assets/myAssets',
         component: () => import('@/views/assets/index.vue'),
-        meta: {
-          title: '资产',
-        },
+        meta: { title: '资产' },
+        children:[
+          {
+            path: 'myAssets',
+            name: 'myAssets',
+            component: () => import('@/views/assets/myAssets/index.vue'),
+            meta: { title: '我的资产' },
+          },
+          {
+            path: 'deposit',
+            name: 'deposit',
+            component: () => import('@/views/assets/deposit-withdraw/Deposit.vue'),
+            meta: { title: '充币' },
+          },
+          {
+            path: 'withdraw',
+            name: 'withdraw',
+            component: () => import('@/views/assets/deposit-withdraw/Withdraw.vue'),
+            meta: { title: '提币' },
+          }
+        ]
       },
       {
         path: 'about',

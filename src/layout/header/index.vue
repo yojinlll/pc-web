@@ -6,7 +6,7 @@
         Beex
       </div>
       <ul class="nav flex">
-        <router-link :to="link.router" tag="li" v-for="(link, index) in navList" :key="index">{{ link.name }}</router-link>
+        <router-link :to="{name: link.router}" tag="li" v-for="(link, index) in navList" :key="index">{{ link.name }}</router-link>
       </ul>
 
       <div class="action flex row-v-c">

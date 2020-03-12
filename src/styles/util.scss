@@ -28,9 +28,11 @@
   &.y-btn{ background-color: #FFC100; }
   &.g-btn{ background-color: #39B167; }
   &.b-btn{ background-color: #347FFF; }
+  &.cancel-btn{ background-color:#57575E; }
   &.y-btn:hover{ background: lighten(#FFC100, 10%); }
   &.g-btn:hover{ background: lighten(#39B167, 10%); }
   &.b-btn:hover{ background: lighten(#347FFF, 10%); }
+  &.cancel-btn:hover{ background: lighten(#57575E, 10%); }
 }
 
 .line-btn {

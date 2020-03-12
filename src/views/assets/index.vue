@@ -2,37 +2,93 @@
   <div class="assets page-max">
     <div class="container flex">
       <div class="assets-nav">
-        <div class="assets-nav-group">
-          <div class="assets-nav-title">资产</div>
-          <div class="assets-nav-item">我的资产</div>
-          <div class="assets-nav-item">资产变动记录</div>
-          <div class="assets-nav-item">场外交易记录</div>
-        </div>
-        <div class="assets-nav-group">
-          <div class="assets-nav-title">我的</div>
-          <div class="assets-nav-item">身份认证</div>
-          <div class="assets-nav-item">设置</div>
-        </div>
-        <div class="assets-nav-group">
-          <div class="assets-nav-title">其他</div>
-          <div class="assets-nav-item">公告消息</div>
-          <div class="assets-nav-item">关于我们</div>
-        </div>
+        <ul class="assets-nav-group">
+          <li class="assets-nav-title">资产</li>
+          <router-link
+            tag="li"
+            :to="{ name: item.route }"
+            v-for="(item, index) in nav.assets"
+            :key="index"
+            class="assets-nav-item"
+          >
+            {{ item.name }}
+          </router-link>
+        </ul>
+
+        <ul class="assets-nav-group">
+          <li class="assets-nav-title">我的</li>
+          <router-link
+            tag="li"
+            :to="{ name: item.route }"
+            v-for="(item, index) in nav.my"
+            :key="index"
+            class="assets-nav-item"
+          >
+            {{ item.name }}
+          </router-link>
+        </ul>
+        
+        <ul class="assets-nav-group">
+          <li class="assets-nav-title">其他</li>
+          <router-link
+            tag="li"
+            :to="{ name: item.route }"
+            v-for="(item, index) in nav.other"
+            :key="index"
+            class="assets-nav-item"
+          >
+            {{ item.name }}
+          </router-link>
+        </ul>
       </div>
       <div class="assets-main">
-        <component :is="currentComponent" class="component"></component>
+        <router-view></router-view>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import MyAssets from './myAssets'
 export default {
   name: 'Assets',
-  computed: {
-    currentComponent() {
-      return MyAssets
+  data() {
+    return {
+      nav: {
+        assets: [
+          {
+            name: '我的资产',
+            route: 'myAssets'
+          },
+          {
+            name: '资产变动记录',
+            route: 'assets'
+          },
+          {
+            name: '场外交易记录',
+            route: 'assets'
+          },
+        ],
+        my: [
+          {
+            name: '身份认证',
+            route: 'assets'
+          },
+          {
+            name: '资产变动记录',
+            route: 'assets'
+          },
+        ],
+        other: [
+          {
+            name: '公告消息',
+            route: 'myAssets'
+          },
+          {
+            name: '关于我们',
+            route: 'assets'
+          }
+        ]
+      }
     }
   }
 }
@@ -82,5 +138,6 @@ $bg: #23252B;
 .assets-main{
   background-color: $bg;
   flex: 1;
+  border-radius: 4px;
 }
 </style>

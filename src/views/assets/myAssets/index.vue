@@ -22,8 +22,16 @@
           <span class="sub-account-title">钱包余额</span>
           <span class="sub-account-amount">100 {{ token }}</span>
           <div class="btn-wrap line-wrap">
-            <div class="common-btn">提币</div>
-            <div class="common-btn">充币</div>
+            <div class="common-btn" @click="$router.push('withdraw')">提币</div>
+            <div class="common-btn" @click="$router.push('deposit')">充币</div>
+          </div>
+        </li>
+        <li class="sub-account-item line-wrap">
+          <span class="sub-account-title">OTC账户</span>
+          <span class="sub-account-amount">100 {{ token }}</span>
+          <div class="btn-wrap line-wrap">
+            <div class="common-btn y-theme" @click="transferDialogVisible = true">划入</div>
+            <div class="common-btn b-btn" @click="transferDialogVisible = true">转出</div>
           </div>
         </li>
         <li class="sub-account-item line-wrap">
@@ -59,18 +67,34 @@
           </div>
         </li>
       </ul>
+
+      <el-dialog
+        title="转账"
+        :visible.sync="transferDialogVisible"
+        :show-close="false"
+        :center="true"
+        width="20%"
+      >
+        <el-input-number v-model="amount" :min="1" :max="10000" label="描述文字" />
+        <span slot="footer" class="dialog-footer">
+          <div class="common-btn cancel-btn"  @click="transferDialogVisible = false">取 消</div>
+          <div class="common-btn b-btn" @click="transferDialogVisible = false">确 定</div>
+        </span>
+      </el-dialog>
     </div>
   </div>
 </template>
 
 <script>
-import { Icon, Option, Select} from 'element-ui'
+import { Icon, Option, Select, Dialog, InputNumber} from 'element-ui'
 export default {
   name: 'MyAssets',
   components: {
     [Icon.name]: Icon,
     [Option.name]: Option,
     [Select.name]: Select,
+    [Dialog.name]: Dialog,
+    [InputNumber.name]: InputNumber,
   },
   data() {
     return {
@@ -84,7 +108,9 @@ export default {
           value: 'RMB',
           label: 'RMB'
         },
-      ]
+      ],
+      transferDialogVisible: false,
+      amount: ''
     }
   }
 }
@@ -122,8 +148,19 @@ export default {
   padding-right: 30px;
   font-weight: 600;
 
+  &.cancel-btn{ border: none; background-color: #D8D8D8;}
   &.b-btn{ color: #fff; border: none;}
   &.y-theme{ border: none;}
   & + &{ margin-left: 10px; }
+}
+/deep/ .el-dialog__body{
+  text-align: center;
+}
+/deep/ .el-dialog{
+  border: 6px;
+  background-color: #23252B;
+}
+/deep/ .el-dialog__title{
+  color: #fff;
 }
 </style>
