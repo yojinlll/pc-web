@@ -44,6 +44,12 @@ const routes = [
             meta: { title: '资产变动记录' },
           },
           {
+            path: 'tradeRecords',
+            name: 'tradeRecords',
+            component: () => import('@/views/assets/tradeRecords/index.vue'),
+            meta: { title: '场外交易记录' },
+          },
+          {
             path: 'deposit',
             name: 'deposit',
             component: () => import('@/views/assets/deposit-withdraw/Deposit.vue'),

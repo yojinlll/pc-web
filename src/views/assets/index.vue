@@ -65,7 +65,7 @@ export default {
           },
           {
             name: '场外交易记录',
-            route: 'assets'
+            route: 'tradeRecords'
           },
         ],
         my: [
