@@ -78,6 +78,14 @@ const routes = [
         }
       },
       {
+        path: 'quickSell',
+        name: 'quickSell',
+        component: () => import('@/views/trade/quick-sell-popup/index.vue'),
+        meta: {
+          title: '一键出售',
+        }
+      },
+      {
         path: 'about',
         name: 'about',
         component: () => import('@/views/About.vue')

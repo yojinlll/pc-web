@@ -1,8 +1,8 @@
 <template>
-  <div class="quick-buy-popup page-max">
-    <h1 class="title">一键购买 USDT</h1>
+  <div class="quick-sell-popup page-max">
+    <h1 class="title">一键出售 USDT</h1>
     <p class="sub-title">小额快速交易，0手续费</p>
-    <div class="quick-buy-inner">
+    <div class="quick-sell-inner">
       <el-form :model="form">
         <el-form-item label="按金额购买" class="input-amount">
           <el-input type="text" v-model="form.amount" placeholder="请输入金额" />
@@ -26,7 +26,7 @@
           <div class="form-item">12121212</div>
         </el-form-item>
         <el-form-item>
-          <div class="common-btn y-btn">购买 USDT</div>
+          <div class="common-btn g-btn">出售 USDT</div>
         </el-form-item>
       </el-form>
     </div>
@@ -36,7 +36,7 @@
 <script>
 import { form, formItem, Input } from 'element-ui'
 export default {
-  name: "quickBuyPopup",
+  name: "quickSellPopup",
   components: {
     [Input.name]: Input,
     [form.name]: form,
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.quick-buy-popup{
+.quick-sell-popup{
   color: #fff;
   padding: 100px 300px;
 
@@ -69,7 +69,7 @@ export default {
     color: #7B7B7B;
 }
 }
-.quick-buy-inner{
+.quick-sell-inner{
   min-height: 400px;
   background-color: #23252B;
   border-radius: 8px;
@@ -78,6 +78,7 @@ export default {
   .common-btn{
     width: 100%;
     padding: 16px;
+    color: #fff;
   }
   .pay-options{
     margin: 40px 0 20px;
@@ -88,7 +89,7 @@ export default {
       border: 2px solid #2D2E32;
       margin-right: 10px;
       position: relative;
-      &.active{ border: 2px solid #FFC100; }
+      &.active{ border: 2px solid #39B167; }
       &:last-child{ margin-right: 0 }
 
       input{ position: absolute; visibility: hidden;}
