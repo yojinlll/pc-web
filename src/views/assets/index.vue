@@ -10,6 +10,7 @@
             v-for="(item, index) in nav.assets"
             :key="index"
             class="assets-nav-item"
+            :class="{active: item.route === activeNav}"
           >
             {{ item.name }}
           </router-link>
@@ -23,6 +24,7 @@
             v-for="(item, index) in nav.my"
             :key="index"
             class="assets-nav-item"
+            :class="{active: item.route === activeNav }"
           >
             {{ item.name }}
           </router-link>
@@ -36,6 +38,7 @@
             v-for="(item, index) in nav.other"
             :key="index"
             class="assets-nav-item"
+            :class="{active: item.route === activeNav }"
           >
             {{ item.name }}
           </router-link>
@@ -81,7 +84,7 @@ export default {
         other: [
           {
             name: '公告消息',
-            route: 'myAssets'
+            route: 'assets'
           },
           {
             name: '关于我们',
@@ -90,6 +93,9 @@ export default {
         ]
       }
     }
+  },
+  computed: {
+    activeNav(){ return this.$route.name }
   }
 }
 </script>
@@ -127,13 +133,16 @@ $bg: #23252B;
 }
 .assets-nav-title, .assets-nav-item{
   line-height: 3;
-  padding: 0 20px;
+  border-left: 4px solid transparent;
+  padding: 0 20px 0 10px;
 }
 .assets-nav-item{
   cursor: pointer;
-  &:hover{
+  &.active{
     background-color: #383640;
+    border-left: 4px solid #FFCF35;
   }
+  &:hover{ background-color: #383640; }
 }
 .assets-main{
   background-color: $bg;

@@ -72,7 +72,7 @@ export default {
   },
   data() {
     return {
-      isAuthDialogVisible: true,
+      isAuthDialogVisible: false,
       authForm: {
         area: '',
         name: '',
