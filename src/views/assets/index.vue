@@ -61,7 +61,7 @@ export default {
           },
           {
             name: '资产变动记录',
-            route: 'assets'
+            route: 'changeRecords'
           },
           {
             name: '场外交易记录',

@@ -38,6 +38,12 @@ const routes = [
             meta: { title: '我的资产' },
           },
           {
+            path: 'changeRecords',
+            name: 'changeRecords',
+            component: () => import('@/views/assets/changeRecords/index.vue'),
+            meta: { title: '资产变动记录' },
+          },
+          {
             path: 'deposit',
             name: 'deposit',
             component: () => import('@/views/assets/deposit-withdraw/Deposit.vue'),

@@ -1,6 +1,6 @@
 <template>
   <div class="assets_my-assets">
-    <h1 class="title">我的资产</h1>
+    <h1 class="assets-inner-title">我的资产</h1>
     <div class="container">
       <div class="action-bar line-wrap">
         <el-select v-model="token" placeholder="请选择" style="width:100px;">
@@ -121,9 +121,9 @@ export default {
   padding: 20px;
 }
 .title{
-  font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   color: #fff;
+  font-size: 1.5em;
 }
 .action-bar{
   margin: 20px 0;
