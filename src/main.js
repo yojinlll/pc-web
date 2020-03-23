@@ -6,6 +6,9 @@ import '@/styles/index.scss'
 
 import './svg'
 
+import { Message } from 'element-ui';
+Vue.prototype.$message = Message;
+
 new Vue({
   router,
   store,

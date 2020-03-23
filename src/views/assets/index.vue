@@ -74,7 +74,7 @@ export default {
             route: 'assets'
           },
           {
-            name: '资产变动记录',
+            name: '设置',
             route: 'assets'
           },
         ],

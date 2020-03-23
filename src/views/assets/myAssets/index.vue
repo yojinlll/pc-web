@@ -18,7 +18,7 @@
       </div>
 
       <ul class="sub-account-list">
-        <li class="sub-account-item sub-account_wallet line-wrap y-theme">
+        <li class="sub-account-item sub-account_wallet line-wrap">
           <span class="sub-account-title">钱包余额</span>
           <span class="sub-account-amount">100 {{ token }}</span>
           <div class="btn-wrap line-wrap">
@@ -141,7 +141,10 @@ export default {
   &:hover{ background-color: lighten(#36343e, 1%); }
   .btn-wrap{ padding: 10px 0; width: 200px; justify-content: flex-end;}
 }
-.sub-account_wallet{ color: #000; }
+.sub-account_wallet{
+  color: #000;
+  background:linear-gradient(169deg,#ffe552 0%,#ffc629 100%);
+}
 .common-btn{
   border: 1px solid #000;
   padding-left: 30px;

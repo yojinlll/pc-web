@@ -21,7 +21,9 @@
           <span class="title">充币地址：</span>
           <div class="address-input line-wrap">
             <el-input v-model="address" placeholder="请输入内容" />
-            <div class="common-btn y-btn">复制</div>
+            <fg-copy :text="address">
+              <div class="common-btn y-btn">复制</div>
+            </fg-copy>
           </div>
 
           <p>请勿向上述地址充值任何非</p>
