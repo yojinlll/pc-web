@@ -1,6 +1,6 @@
 <template>
   <div class="change-records">
-    <h1 class="assets-inner-title">资产变动记录</h1>
+    <h1 class="page_assets-inner-title">资产变动记录</h1>
 
     <ul class="action-options flex">
       <li class="common-btn"

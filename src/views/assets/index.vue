@@ -71,7 +71,7 @@ export default {
         my: [
           {
             name: '身份认证',
-            route: 'assets'
+            route: 'auth'
           },
           {
             name: '设置',

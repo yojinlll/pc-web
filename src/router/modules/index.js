@@ -50,6 +50,12 @@ const routes = [
             meta: { title: '场外交易记录' },
           },
           {
+            path: 'auth',
+            name: 'auth',
+            component: () => import('@/views/assets/auth/index.vue'),
+            meta: { title: '身份认证' },
+          },
+          {
             path: 'deposit',
             name: 'deposit',
             component: () => import('@/views/assets/deposit-withdraw/Deposit.vue'),

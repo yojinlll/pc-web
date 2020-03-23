@@ -1,6 +1,6 @@
 <template>
   <div class="trade-records">
-    <h1 class="assets-inner-title">场外交易记录</h1>
+    <h1 class="page_assets-inner-title">场外交易记录</h1>
 
     <ul class="action-options flex">
       <li class="common-btn"

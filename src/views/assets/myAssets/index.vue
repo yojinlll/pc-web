@@ -1,6 +1,6 @@
 <template>
   <div class="assets_my-assets">
-    <h1 class="assets-inner-title">我的资产</h1>
+    <h1 class="page_assets-inner-title">我的资产</h1>
     <div class="container">
       <div class="action-bar line-wrap">
         <el-select v-model="token" placeholder="请选择" style="width:100px;">
