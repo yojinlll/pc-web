@@ -70,6 +70,14 @@ const routes = [
         ]
       },
       {
+        path: 'quickBuy',
+        name: 'quickBuy',
+        component: () => import('@/views/trade/quick-buy-popup/index.vue'),
+        meta: {
+          title: '一键购买',
+        }
+      },
+      {
         path: 'about',
         name: 'about',
         component: () => import('@/views/About.vue')

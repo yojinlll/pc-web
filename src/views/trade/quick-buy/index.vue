@@ -36,7 +36,7 @@
               <el-option label="用户电话" value="3"></el-option>
             </el-select>
           </el-input>
-          <div class="common-btn y-btn"> 购买 {{ tokenList[curIdx].token }} </div>
+          <div class="common-btn y-btn" @click="$router.push('quickBuy')"> 购买 {{ tokenList[curIdx].token }} </div>
         </div>
         <ul class="amount-options line-wrap">
           <li

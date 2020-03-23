@@ -11,17 +11,17 @@
 
       <form>
         <div class="address">
-          <span class="label">提币地址:</span>
+          <label>提币地址:</label>
           <el-input v-model="withdrawForm.address" placeholder="请输入内容"></el-input>
           <span class="tips">* 请确保输入正确的 USDT地址，轉入其他幣種地址將無法找回！</span>
         </div>
         <div class="line-wrap">
           <div class="amount">
-            <span class="label">提币数量:</span>
+            <label>提币数量:</label>
             <el-input v-model="withdrawForm.amount" placeholder="请输入内容"></el-input>
           </div>
           <div class="fee">
-            <span class="label">手续费:</span>
+            <label>手续费:</label>
             <el-input v-model="withdrawForm.fee" placeholder="请输入内容"></el-input>
           </div>
         </div>
@@ -68,7 +68,7 @@ export default {
   padding: 20px;
 }
 form{
-  .label{
+  label{
     display: inline-block;
     margin-bottom: 20px;
   }

@@ -34,7 +34,7 @@ export default {
 .footer{
   background-color: #06070B;
   color: #fff;
-  min-height: 100px;
+  min-height: 250px;
   padding: 20px 0;
 }
 .row-part{ margin-top: 30px; padding: 0 20px;}
