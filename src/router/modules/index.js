@@ -100,12 +100,7 @@ const routes = [
         meta: {
           title: '出售详情',
         }
-      },
-      {
-        path: 'about',
-        name: 'about',
-        component: () => import('@/views/About.vue')
-      },
+      }
     ]
   }
 ]

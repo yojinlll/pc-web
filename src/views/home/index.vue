@@ -12,33 +12,51 @@
         <div class="title">实时行情</div>
         <ul class="line-wrap">
           <li
-            class="currency"
+            class="currency flex col row-between"
             v-for="(currency, index) in currencyList"
             :key="index"
-          ></li>
+          >
+            <div class="symbol">USDT</div>
+            <div class="price">￥6.93</div>
+            <div class="increase line-wrap">
+              <span>+1.23%</span>
+              <i class="el-icon-top"></i>
+            </div>
+          </li>
         </ul>
       </div>
 
       <el-tabs v-model="activeName" class="table-tabs">
-        <el-tab-pane label="用户管理" name="first">
-          <div style="border: 1px solid red; height: 500px;">
-            <el-table :data="tableData" style="width: 100%">
-              <el-table-column
-                prop="date"
-                label="日期"
-                width="180"
-              ></el-table-column>
-              <el-table-column
-                prop="name"
-                label="姓名"
-                width="180"
-              ></el-table-column>
-              <el-table-column prop="address" label="地址"></el-table-column>
-            </el-table>
-          </div>
+        <el-tab-pane label="USDT" name="first">
+          <table class="quotes-table" style="width: 100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th style="width: 160px">名称</th>
+                <th class="text-end"  style="width: 160px">现价</th>
+                <th class="text-end">24h涨幅</th>
+                <th class="text-end">24h最高</th>
+                <th class="text-end">24h最低</th>
+                <th style="text-align: center; width: 300px">7日走势</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="item in 6" :key="item">
+                <td>11111</td>
+                <td class="text-end">
+                  <div>123456</div>
+                  <div>≈ 123456</div>
+                </td>
+                <td class="text-end">5.72%</td>
+                <td class="text-end">11111</td>
+                <td class="text-end">11111</td>
+                <td style="text-align: center;">11111</td>
+              </tr>
+            </tbody>
+          </table>
+
         </el-tab-pane>
 
-        <el-tab-pane label="配置管理" name="second">
+        <el-tab-pane label="ETH" name="second">
           <div style="border: 1px solid red; height: 500px;">配置管理</div>
         </el-tab-pane>
       </el-tabs>
@@ -61,40 +79,29 @@
 </template>
 
 <script>
-import { Carousel, CarouselItem, Table, TableColumn, Tabs, TabPane,} from 'element-ui'
+import { Carousel, CarouselItem, Tabs, TabPane,} from 'element-ui'
 export default {
   name: 'Home',
   components:{
     [Carousel.name]: Carousel,
     [CarouselItem.name]: CarouselItem,
-    [Table.name]: Table,
-    [TableColumn.name]: TableColumn,
     [Tabs.name]: Tabs,
     [TabPane.name]: TabPane,
   },
   data() {
     return {
       currencyList: 4,
-      activeName: 'second',
-      tableData: [
-        {
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
+      activeName: 'first',
+      tableData: Array.from({length: 6}).map(item => {
+        return {
+          one: 'one',
+          two: 'two',
+          three: 'three',
+          four: 'four',
+          five: 'five',
+          six: 'six',
         }
-      ]
+      })
     }
   }
 }
@@ -125,6 +132,10 @@ export default {
     background-color: #34353c;
     height: 150px;
     width: 22%;
+    padding: 20px;
+    
+    .symbol{ font-size: 1.3em; }
+    .price{ font-size: 2em; }
   }
 }
 .table-tabs {
@@ -164,6 +175,29 @@ export default {
     cursor: pointer;
 
     &:first-child{ margin-right: 40px; }
+  }
+}
+.quotes-table{
+  .text-end{ text-align: end; }
+  th{
+    text-align: start;
+    padding: 20px 0;
+    background-color: #1B1C22;
+    font-weight: 400;
+    font-size: 14px;
+    color: #8d8e95;
+
+    &:first-child{ padding-left: 40px; }
+  }
+  td{
+    padding: 20px 0;
+    background-color: #23252B;
+    &:first-child{ padding-left: 40px; }
+  }
+  tr:nth-child(even){
+    td{
+      background-color: #1D1F24;
+    }
   }
 }
 
