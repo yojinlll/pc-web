@@ -26,7 +26,7 @@
           <div class="form-item">12121212</div>
         </el-form-item>
         <el-form-item>
-          <div class="common-btn y-btn">购买 USDT</div>
+          <div class="common-btn y-btn" @click="$router.push('quickBuyDetail')">购买 USDT</div>
         </el-form-item>
       </el-form>
     </div>
