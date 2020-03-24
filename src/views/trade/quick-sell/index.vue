@@ -58,30 +58,66 @@
           刷新数据
         </div>
       </div>
-      <el-table :data="tableData" style="width: 100%">
-        <el-table-column
-          prop="date"
-          label="日期"
-          width="180"
-        ></el-table-column>
-        <el-table-column
-          prop="name"
-          label="姓名"
-          width="180"
-        ></el-table-column>
-        <el-table-column prop="address" label="地址"></el-table-column>
-      </el-table>
+      <div class="buyer-table">
+        <div class="buyer-table-head flex">
+          <div class="buyer-th">卖家</div>
+          <div class="buyer-th">数量</div>
+          <div class="buyer-th">限额</div>
+          <div class="buyer-th">单价</div>
+          <div class="buyer-th">支付方式</div>
+          <div class="buyer-th">交易</div>
+        </div>
+        <div class="buyer-table-body">
+
+          <div class="buyer-table-tr flex row-v-c" v-for="(item, index) in 4" :key="index" :class="{active: item === activeItem}">
+
+            <div class="buyer-td flex row-v-c">
+              <div class="avatar"></div>
+              <span>buyer</span>
+            </div>
+            <div class="buyer-td">2000 USDT</div>
+            <div class="buyer-td">100 - 500 CNY</div>
+            <div class="buyer-td">6.78CNY</div>
+            <div class="buyer-td">支付宝</div>
+            <div class="buyer-td">
+              <div class="common-btn g-btn" @click="activeItem = item">出售 USDT</div>
+            </div>
+
+            <div class="inner-dialog flex" v-if="activeItem === item">
+              <div class="avatar"></div>
+              <div style="flex: 1">
+                <div class="dialog-tr flex row-v-c">
+                  <div class="dialog-td">username</div>
+                  <div class="dialog-td">amount</div>
+                  <div class="dialog-td">xxxx</div>
+                  <div class="dialog-td">xxxx</div>
+                  <div class="dialog-td action flex row-v-c">
+                    <input class="dialog-input" type="text" placeholder="请输入购买总金额">
+                    <div class="confirm-btn common-btn g-btn">下单</div>
+                    <div class="cancel-btn" @click="activeItem = ''">取消</div>
+                  </div>
+                </div>
+                <div class="pay-methods">
+                  <div class="common-btn">银行卡</div>
+                  <div class="common-btn">支付宝</div>
+                  <div class="common-btn">微信支付</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Table, TableColumn, Input, Select, Option} from 'element-ui'
+import { Input, Select, Option} from 'element-ui'
 export default {
   name: 'QuickSell',
   components: {
-    [Table.name]: Table,
-    [TableColumn.name]: TableColumn,
     [Input.name]: Input,
     [Select.name]: Select,
     [Option.name]: Option,
@@ -144,7 +180,8 @@ export default {
           name: '王小虎',
           address: '上海市普陀区金沙江路 1516 弄'
         }
-      ]
+      ],
+      activeItem: ''
     }
   }
 }
@@ -220,6 +257,84 @@ $bg: #23252B;
       &:hover{
         background-color: lighten(#23252B, 10%)
       }
+    }
+  }
+}
+.buyer-table{
+  width: 100%;
+
+  .buyer-table-head{ padding: 20px 0; color: #7B7B7B; font-size: 14px; border-bottom: 1px solid #474747;}
+  .buyer-th, .buyer-td{ flex: 1; }
+  .buyer-table-tr{
+    padding: 20px 0;
+    border-bottom: 1px solid #474747;
+    position: relative;
+    transition: all 250ms;
+
+    &.active{ padding: 40px 0; }
+  }
+
+  .avatar{
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-color: #D8D8D8;
+    margin-right: 20px;
+  }
+  .inner-dialog{
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #36383D;
+    border-radius: 12px;
+    width: 105%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:0px 5px 16px 0px #00000070;
+
+    .avatar{
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      background-color: #D8D8D8;
+      margin-right: 20px;
+    }
+    .dialog-tr{ padding-bottom: 10px; }
+    .dialog-td{ flex: 1; }
+    .dialog-td.action{ flex: 2 }
+    .confirm-btn{
+      padding: 10px 28px;
+    } 
+    .cancel-btn{
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      line-height: 1;
+      word-break: keep-all;
+    }
+    .pay-methods{
+      border-top: 1px solid #474747;
+      padding-top: 10px;
+
+      .common-btn{
+        margin-right: 10px;
+        border: 1px solid #979797;
+        color: #9A9A9A;
+        font-weight: 400;
+        font-size: 12px;
+        transition: all 250ms;
+        &:hover{ background-color: lighten($color: #36383D, $amount: 10%); }
+      }
+    }
+    .dialog-input{
+      border: 1px solid #39B167;
+      background-color: inherit;
+      font-size: 16px;
+      margin-right: 10px;
+      width: 180px;
+      line-height: 2;
+      border-radius: 6px;
+      padding: 0 4px;
+      color: #fff;
     }
   }
 }
