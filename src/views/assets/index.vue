@@ -2,45 +2,17 @@
   <div class="assets page-max">
     <div class="container flex">
       <div class="assets-nav">
-        <ul class="assets-nav-group">
-          <li class="assets-nav-title">资产</li>
+        <ul class="assets-nav-group" v-for="(group, index) in nav" :key="index">
+          <li class="assets-nav-title">{{ group.name }}</li>
           <router-link
             tag="li"
             :to="{ name: item.route }"
-            v-for="(item, index) in nav.assets"
-            :key="index"
-            class="assets-nav-item"
-            :class="{active: item.route === activeNav}"
+            v-for="(item, i) in group.router"
+            :key="i"
+            class="assets-nav-item flex row-v-c"
           >
-            {{ item.name }}
-          </router-link>
-        </ul>
-
-        <ul class="assets-nav-group">
-          <li class="assets-nav-title">我的</li>
-          <router-link
-            tag="li"
-            :to="{ name: item.route }"
-            v-for="(item, index) in nav.my"
-            :key="index"
-            class="assets-nav-item"
-            :class="{active: item.route === activeNav }"
-          >
-            {{ item.name }}
-          </router-link>
-        </ul>
-        
-        <ul class="assets-nav-group">
-          <li class="assets-nav-title">其他</li>
-          <router-link
-            tag="li"
-            :to="{ name: item.route }"
-            v-for="(item, index) in nav.other"
-            :key="index"
-            class="assets-nav-item"
-            :class="{active: item.route === activeNav }"
-          >
-            {{ item.name }}
+            <svg-icon :icon-class="item.icon" class="nav-icon"/>
+            <span>{{ item.name }}</span>
           </router-link>
         </ul>
       </div>
@@ -56,46 +28,64 @@ export default {
   name: 'Assets',
   data() {
     return {
-      nav: {
-        assets: [
-          {
-            name: '我的资产',
-            route: 'myAssets'
-          },
-          {
-            name: '资产变动记录',
-            route: 'changeRecords'
-          },
-          {
-            name: '场外交易记录',
-            route: 'tradeRecords'
-          },
-        ],
-        my: [
-          {
-            name: '身份认证',
-            route: 'auth'
-          },
-          {
-            name: '设置',
-            route: 'assets'
-          },
-        ],
-        other: [
-          {
-            name: '公告消息',
-            route: 'assets'
-          },
-          {
-            name: '关于我们',
-            route: 'assets'
-          }
-        ]
-      }
+      nav: [
+        {
+          name: '资产',
+          router: [
+            {
+              name: '我的资产',
+              route: 'myAssets',
+              icon: 'account_assets',
+            },
+            {
+              name: '资产变动记录',
+              route: 'changeRecords',
+              icon: 'account_records',
+            },
+            {
+              name: '场外交易记录',
+              route: 'tradeRecords',
+              icon: 'account_assets',
+            },
+          ]
+        },
+        {
+          name: '我的',
+          router: [
+            {
+              name: '身份认证',
+              route: 'auth',
+              icon: 'account_user',
+            },
+            {
+              name: '设置',
+              route: 'home',
+              icon: 'assets_setting',
+            },
+          ],
+        },
+        {
+          name: '其他',
+          router: [
+            {
+              name: '公告消息',
+              route: 'home',
+              icon: 'account_assets',
+            },
+            {
+              name: '帮助中心',
+              route: 'home',
+              icon: 'account_assets',
+            },
+            {
+              name: '关于我们',
+              route: 'home',
+              icon: 'account_user',
+            }
+          ]
+        }
+      ]
     }
-  },
-  computed: {
-    activeNav(){ return this.$route.name }
   }
 }
 </script>
@@ -138,11 +128,14 @@ $bg: #23252B;
 }
 .assets-nav-item{
   cursor: pointer;
-  &.active{
+  &.router-link-active{
     background-color: #383640;
     border-left: 4px solid #FFCF35;
   }
   &:hover{ background-color: #383640; }
+}
+.nav-icon{
+  margin-right: 6px;
 }
 .assets-main{
   background-color: $bg;

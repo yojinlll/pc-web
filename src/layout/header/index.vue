@@ -6,7 +6,13 @@
         Beex
       </div>
       <ul class="nav flex">
-        <router-link :to="{name: link.router}" tag="li" v-for="(link, index) in navList" :key="index">{{ link.name }}</router-link>
+        <router-link
+          :to="{name: link.route}"
+          tag="li"
+          v-for="(link, index) in navList"
+          :key="index">
+          {{ link.name }}
+        </router-link>
       </ul>
 
       <div class="action flex row-v-c">
@@ -81,16 +87,20 @@ export default {
       navList: [
         {
           name: '主页',
-          router: 'home',
+          route: 'home',
         },
         {
           name: '场外交易',
-          router: 'trade',
+          route: 'trade',
         },
         {
           name: '资产',
-          router: 'assets',
-        }
+          route: 'assets',
+        },
+        {
+          name: '关于我们',
+          route: 'quickBuy',
+        },
       ]
     }
   }
@@ -119,6 +129,20 @@ export default {
   .nav{
     margin-left: 100px;
     & > li{ margin-right: 50px; cursor: pointer; color: #bebdc5; }
+    .router-link-active{
+      position: relative;
+      color: #FFCF35;
+
+      &::after{
+        display: block;
+        content: '';
+        width: 30px; height: 4px;
+        background-color: #FFCF35;
+        position: absolute;
+        bottom: -8px; left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
   .action{
     margin-left: auto;
