@@ -14,6 +14,7 @@ const routes = [
         component: () => import('@/views/home/index.vue'),
         meta: {
           title: '主页',
+          isHeaderVisible: true, 
         },
       },
       {
@@ -22,6 +23,7 @@ const routes = [
         component: () => import('@/views/trade/index.vue'),
         meta: {
           title: '场外交易',
+          isHeaderVisible: true, 
         },
       },
       {
@@ -29,7 +31,10 @@ const routes = [
         name: 'assets',
         redirect: '/assets/myAssets',
         component: () => import('@/views/assets/index.vue'),
-        meta: { title: '资产' },
+        meta: {
+          title: '资产',
+          isHeaderVisible: true, 
+        },
         children:[
           {
             path: 'myAssets',
@@ -68,6 +73,15 @@ const routes = [
             meta: { title: '提币' },
           }
         ]
+      },
+      {
+        path: 'about',
+        name: 'about',
+        component: () => import('@/views/about/index.vue'),
+        meta: {
+          title: '关于我们',
+          isHeaderVisible: true, 
+        },
       },
       {
         path: 'quickBuy',

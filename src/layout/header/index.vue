@@ -7,11 +7,11 @@
       </div>
       <ul class="nav flex">
         <router-link
-          :to="{name: link.route}"
+          :to="{name: link.name}"
           tag="li"
           v-for="(link, index) in navList"
           :key="index">
-          {{ link.name }}
+          {{ link.meta.title }}
         </router-link>
       </ul>
 
@@ -84,24 +84,7 @@ export default {
   },
   data() {
     return {
-      navList: [
-        {
-          name: '主页',
-          route: 'home',
-        },
-        {
-          name: '场外交易',
-          route: 'trade',
-        },
-        {
-          name: '资产',
-          route: 'assets',
-        },
-        {
-          name: '关于我们',
-          route: 'quickBuy',
-        },
-      ]
+      navList: this.$router.options.routes[1].children.filter(item => item.meta.isHeaderVisible)
     }
   }
 }
