@@ -1,77 +1,78 @@
 <template>
   <header class="header">
-    <div class="page-max flex row-v-c">
-      <div class="logo line-wrap">
-        <img alt="Vue logo" src="@/assets/logo.png">
-        Beex
-      </div>
-      <ul class="nav flex">
-        <router-link
-          :to="{name: link.name}"
-          tag="li"
-          v-for="(link, index) in navList"
-          :key="index">
-          {{ link.meta.title }}
-        </router-link>
-      </ul>
+    <div style="margin: 0 20px">
+      <div class="page-max flex row-v-c">
+        <div class="logo line-wrap">
+          <svg-icon icon-class="logo" />
+          <span>Beex</span>
+        </div>
+        <ul class="nav flex">
+          <router-link
+            :to="{name: link.name}"
+            tag="li"
+            v-for="(link, index) in navList"
+            :key="index">
+            {{ link.meta.title }}
+          </router-link>
+        </ul>
 
-      <div class="action flex row-v-c">
+        <div class="action flex row-v-c">
 
-        <el-popover
-          placement="bottom"
-          popper-class="account-wrap"
-          width="280"
-          trigger="click">
-          <div class="account-main">
-            <ul class="part assets">
-              <li>钱包余额</li>
-              <li>OTC账户</li>
-              <li>区块链游戏</li>
-              <li>真人视讯 & 体育竞猜</li>
-              <li>精彩视频</li>
-            </ul>
-            <ul class="part">
-              <li>
-                <svg-icon icon-class="account_assets" />
-                <span>我的资产</span>
-              </li>
-              <li>
-                <svg-icon icon-class="account_user" />
-                <span>个人中心</span>
-              </li>
-            </ul>
-            <ul class="part">
-              <li>
-                <svg-icon icon-class="account_deposit" />
-                <span>充币</span>
-              </li>
-              <li>
-                <svg-icon icon-class="account_withdraw" />
-                <span>提币</span>
-              </li>
-              <li>
-                <svg-icon icon-class="account_records" />
-                <span>资产变动记录</span>
-              </li>
-            </ul>
-            <div class="logout">
-              <svg-icon icon-class="account_logout" />
-              <span>退出</span>
+          <el-popover
+            placement="bottom"
+            popper-class="account-wrap"
+            width="280"
+            trigger="click">
+            <div class="account-main">
+              <ul class="part assets">
+                <li>钱包余额</li>
+                <li>OTC账户</li>
+                <li>区块链游戏</li>
+                <li>真人视讯 & 体育竞猜</li>
+                <li>精彩视频</li>
+              </ul>
+              <ul class="part">
+                <li>
+                  <svg-icon icon-class="account_assets" />
+                  <span>我的资产</span>
+                </li>
+                <li>
+                  <svg-icon icon-class="account_user" />
+                  <span>个人中心</span>
+                </li>
+              </ul>
+              <ul class="part">
+                <li>
+                  <svg-icon icon-class="account_deposit" />
+                  <span>充币</span>
+                </li>
+                <li>
+                  <svg-icon icon-class="account_withdraw" />
+                  <span>提币</span>
+                </li>
+                <li>
+                  <svg-icon icon-class="account_records" />
+                  <span>资产变动记录</span>
+                </li>
+              </ul>
+              <div class="logout">
+                <svg-icon icon-class="account_logout" />
+                <span>退出</span>
+              </div>
             </div>
-          </div>
-          <div class="account line-wrap" slot="reference">
-            <svg-icon icon-class="avatar" class="avatar" />
-            <span>username</span>
-            <i class="el-icon-caret-bottom" />
-          </div>
-        </el-popover>
+            <div class="account line-wrap" slot="reference">
+              <svg-icon icon-class="avatar" class="avatar" />
+              <span>username</span>
+              <i class="el-icon-caret-bottom" />
+            </div>
+          </el-popover>
 
-        <div class="login-btn common-btn y-theme">登录</div>
+          <div class="login-btn common-btn y-theme">登录</div>
 
-        <div class="lang">En</div>
+          <div class="lang">En</div>
+        </div>
       </div>
     </div>
-
   </header>
 </template>
 
@@ -107,7 +108,10 @@ export default {
   color: #fff;
   padding: 10px 0;
 
-  .logo{ font-size: 24px; font-weight: 600; }
+  .logo{
+    font-size: 24px; font-weight: 600;
+    svg{ width: 1.5em; height: 1.5em; margin-right: 4px;}
+  }
 
   .nav{
     margin-left: 100px;
